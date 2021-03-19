@@ -1,0 +1,12 @@
+public void recursiveaddEveryOther(ListNode list, int value){
+	ListNode first = list;
+        if(list!= null) {
+        	int p = list.info;
+        	p += value;
+        	list.info = p;
+       		ListNode again = list.next.next;
+        	if (again != null) {
+         		recursiveaddEveryOther(again, value);
+            	}
+        }
+}

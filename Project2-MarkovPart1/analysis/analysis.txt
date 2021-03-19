@@ -1,0 +1,68 @@
+INSTRUCTIONS for Analysis Part
+
+This file contains questions for the analysis part of the assignment.
+You will need to copy these questions, answer them and save it as a .pdf. You
+may want to copy them into a program such as Word or Google Docs and when finished
+save it as a .pdf.
+
+You'll submit the .PDF version of your analysis as a separate submission on Gradescope.
+____________________________________________________________________________________
+
+YOUR NAME and YOUR NETID
+
+Run WordGramBenchmark for wordgrams of size 2-10 and record
+the number of WordGram values/objects that occur more than
+once as reported by the runs. For example, with WSIZE = 2,
+which generates 2-grams, the output of benchmark and benchmarkShift
+each indicates that the total # wordgrams generated is 177,634
+and that the # unique wordgrams is 117,181
+
+This means there are 177,634 - 117,181 = 60,453 WordGram values that
+occur more than once. Find these same numbers/values for other orders
+of k and complete the table below for different k-grams/different
+values of WSIZE
+
+WSIZE    # duplicates
+2        60,453
+3        10,756
+4
+5
+6
+7
+8
+9
+10
+
+=====
+Explain in your own words the conceptual differences between
+the benchmark and benchmarkShift methods.
+Answer these questions:
+
+(1) Why the results of these methods should be the same in
+terms of changes made to the HashSet parameter passed to each method.
+
+(2) What are the conceptual differences between the two
+benchmarking methods
+
+(3) We will now analyze and compare the amount of memory allocated for ALL arrays in the two methods.
+For the benchmark() method, answer the following questions, giving answers in terms of variables such
+as WSIZE and the number of words in the text, N:
+    (a) Are there any String[] arrays created directly within the method? If yes, what are their sizes?
+    You do not need to count ArrayLists.
+    (b) How many WordGram objects are created in total, either directly or indirectly? Note that the
+    shiftAdd() method creates and returns a NEW WordGram object every time it’s called.
+    (c) Each WordGram object stores a String[] array, created in the constructor, which takes up memory.
+    What’s the size of this array for each WordGram?
+    (d) Does your shiftAdd() method create additional String[] arrays? If yes, what’s the total size of
+    arrays created over all shiftAdd() method calls if applicable? (The answer may be different depending
+    on your implementation.)
+    (e) Based on your answers to (a)-(d), what’s the total amount of memory taken up by all String[] arrays,
+    in terms of their total size?
+
+(4) Answer the same questions (a)-(e) from question (3) for the method benchmarkShift()
+
+(5) Compare your answers for total memory from (3)(e) for benchmark() and (4)(e) for benchmarkShift().
+Is the total amount of memory the same or different in benchmark() and benchmarkShift()? If different,
+which one uses more memory?
+
+

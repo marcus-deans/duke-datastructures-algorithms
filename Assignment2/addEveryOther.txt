@@ -1,0 +1,18 @@
+public ListNode addEveryOther(ListNode list, int value) {
+	ListNode first = list;
+        if (list == null) {
+        	return null;
+        }
+        int evenodd = 2;
+        int curlistinfo = 0;
+        while (list != null) {
+        	evenodd += 1;
+        	if (evenodd % 2 == 1) {
+        		curlistinfo = list.info;
+                	curlistinfo += value;
+                	list.info = zur;
+            	}
+        	list = list.next;
+        }
+        return first;
+}

@@ -1,0 +1,42 @@
+INSTRUCTIONS for Analysis Part
+
+This file contains questions for the analysis part of the assignment.
+You will need to copy these questions, answer them and save it as a .pdf. You
+may want to copy them into a program such as Word or Google Docs and when finished
+save it as a .pdf.
+
+You'll submit the .PDF version of your analysis as a separate submission on Gradescope.
+____________________________________________________________________________________
+
+
+This is analysis.txt
+Replace this line with your name
+Replace this line with your netid
+
+Copy/paste the output of your simulation when using planets.txt,
+running the simulation for 1,000,000 (one  million) seconds, and
+with a time-step/dt value of 25,000
+
+(replace with copy/paste)
+
+Copy/paste the output of your simulation when using planets.txt,
+running the simulation for 2,000,000 (two  million) seconds, and
+with a time-step/dt value of 25,000
+
+(replace with copy/paste)
+
+Run the simulation for a billion seconds (10^9) and a time-step/dt
+of a million. You should see behavior inconsistent with what is
+expected for celestial bodies. This is due to large values of dt
+when approximating forces. Write down below what you see during
+this simulation.
+
+(replace with observed behavior)
+
+Run the simulation with the original time and dt values which are
+
+double totalTime = 39447000.0;
+double dt = 25000.0;
+
+But use the input data file "data/kaleidoscope.txt".
+In fewer than 50 words describe the visualization you observe.

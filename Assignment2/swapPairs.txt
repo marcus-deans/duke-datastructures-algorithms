@@ -1,0 +1,16 @@
+public void swapPairs(ListNode list){
+        ListNode first = list;
+        int evenodd = 2;
+        int alpha = 0;
+        int bravo = 0;
+        while(list != null){
+        	evenodd += 1;
+      		if((evenodd % 2 == 1)&&(list.next != null)){
+                	alpha = list.info;
+                	bravo = list.next.info;
+                	list.info = bravo;
+                	list.next.info = alpha;
+            	}	
+            	list = list.next;
+        }
+}

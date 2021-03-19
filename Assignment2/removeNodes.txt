@@ -1,0 +1,30 @@
+public TreeNode removeNodes(TreeNode root, int number){
+        if (root == null){
+            return root;
+        }
+        //Part 1 - Two recursive calls missing for subtrees
+        root.left = removeNodes(root.left, number);
+        root.right = removeNodes(root.right, number);
+
+        if (root.info % number != 0){
+            return root;
+        }
+        // node must be removed - there are three cases
+        //part 2- case if node in a leaf node
+        else if((root.left == null)&&(root.right == null)){
+            return null;
+        }
+        //part 3 - case if node has only one child
+        else if((root.left == null)&&(root.right!=null)){
+            return root.right;
+        }
+        else if((root.left!=null)&&(root.right==null)){
+            return root.left;
+        }
+        //part 4 - case if node has two children
+        else if((root.left!=null)&&(root.right!=null)){
+            leftMost(root.right).left = root.left;
+            return root.right;
+        }
+        return root;
+    }

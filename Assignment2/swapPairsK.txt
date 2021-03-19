@@ -1,0 +1,10 @@
+public void swapPairsK(ListNode list, int k, boolean swap){
+        ListNode first = list;
+        if((list.info >= k)&&(list.next!=null)){
+        	swap = true;
+        	swapPairs(list);
+        }
+        if((!swap)&&(list.next != null)){
+        	swapPairsK(list.next, k, swap);
+        }
+    }

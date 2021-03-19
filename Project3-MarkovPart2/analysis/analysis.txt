@@ -1,0 +1,54 @@
+INSTRUCTIONS for Analysis Part
+
+This file contains questions for the analysis part of the assignment.
+You will need to copy these questions, answer them and save it as a .pdf. You
+may want to copy them into a program such as Word or Google Docs and when
+finished save it as a .pdf.
+
+You'll submit the .PDF version of your analysis as a separate submission
+on Gradescope. When submitting your analysis PDF to gradescope, please make
+sure that you select which pages correspond to which questions. Right after
+you submit, gradescope will provide you with the opportunity to select each
+question and match it to the corresponding page in your pdf.
+
+____________________________________________________________________________________
+
+YOUR NAME and YOUR NETID
+
+You're given a class Benchmark that runs several tests that allow you to
+compare the performance of the default, brute-force BaseMarkov and the
+more efficient map-based EfficientMarkov code. The code you start with
+uses data/hawthorne.txt, which is the text of A Scarlet Letter a text of
+487,614 characters (as you'll see in the output when running the benchmark
+tests).  The class uses BaseMarkov, but can be easily changed to use
+EfficientMarkov by changing the appropriate line in the main method.
+You're free to alter this class.
+
+Answer the following questions in your analysis.txt file.  You'll submit
+your analysis as a separate PDF as a separate assignment to Gradescope.
+
+1. Determine (from running Benchmark.java) how long it takes for BaseMarkov
+to generate 2,000, 4,000, 8,000, 16,000, and 32,000 random characters
+using the default file and an order 5 Markov Model. Include these timings
+in your report. The program also generates 4,096 characters using texts
+that increase in size from 487,614 characters to 4,876,140 characters
+(10 times the number). Also include these timings in your report. Include
+an explanation as to whether the timings support the O(NT) analysis. Use
+the fact that for some runs N is fixed and T varies whereas in the other
+runs T is fixed and N varies.
+
+2. Determine (from running Benchmark.java) how long it takes for
+EfficientMarkov to generate 2,000, 4,000, 8,000, 16,000, and 32,000
+random characters using the default file and an order 5 Markov Model.
+Include these timings in your report. The program also generates 4,096
+characters using texts that increase in size from 487,614 characters to
+4,876,140 characters (10 times the number). Also include these timings
+in your report. Include an explanation as to whether the timings support
+the O(N+T) analysis.
+
+
+
+After completing the analysis questions you submit your answers in a PDF
+to Gradescope in the appropriate assignment. Please make sure to match
+pages to questions on the submission interface.
+
